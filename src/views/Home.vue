@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="hero flex justify-center items-center mt-16 ">
+      <div class="Description lg:w-1/2 max-w-2xl text-justify mr-3 ">
+        <h1 class="description__title text-center text-5xl">welcome to the Game solution</h1>
+        <p class="description__paragraph">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+          eaque quod nesciunt, adipisci et quidem expedita tempora ipsa
+          doloribus perspiciatis porro nostrum voluptatem ea veniam, optio
+          asperiores fuga quis atque!
+        </p>
+      </div>
+      <div class="hero__image   lg:w-1/2">
+        <img class=" w-4/5 ml-32 " src="../assets/img/gaming-hero.svg" alt="hero_image">
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
 };
 </script>

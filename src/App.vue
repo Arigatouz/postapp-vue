@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="bg-white-600 w-screen h-screen">
+    <AppHeader />
     <router-view />
+    
+    <div class="absolute  bottom-0 w-full ">
+      <!-- <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0099ff"
+          fill-opacity="1"
+          d="M0,160L16,149.3C32,139,64,117,96,106.7C128,96,160,96,192,122.7C224,149,256,203,288,213.3C320,224,352,192,384,181.3C416,171,448,181,480,160C512,139,544,85,576,64C608,43,640,53,672,64C704,75,736,85,768,101.3C800,117,832,139,864,128C896,117,928,75,960,64C992,53,1024,75,1056,96C1088,117,1120,139,1152,160C1184,181,1216,203,1248,186.7C1280,171,1312,117,1344,101.3C1376,85,1408,107,1424,117.3L1440,128L1440,320L1424,320C1408,320,1376,320,1344,320C1312,320,1280,320,1248,320C1216,320,1184,320,1152,320C1120,320,1088,320,1056,320C1024,320,992,320,960,320C928,320,896,320,864,320C832,320,800,320,768,320C736,320,704,320,672,320C640,320,608,320,576,320C544,320,512,320,480,320C448,320,416,320,384,320C352,320,320,320,288,320C256,320,224,320,192,320C160,320,128,320,96,320C64,320,32,320,16,320L0,320Z"
+        ></path>
+      </svg> -->
+    </div>
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+export default {
+  components: {
+    AppHeader,
+  },
+};
+</script>
+<style lang="scss"></style>
