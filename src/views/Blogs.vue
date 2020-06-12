@@ -1,10 +1,14 @@
 <template>
   <div>
     <main class="container mx-auto ">
-      <h1 class="text-5xl m-10 text-center font-hairline font-bold capitalize">
+      <h1
+        v-bold
+        v-lineUnder
+        class="text-5xl m-10 text-center font-hairline  capitalize"
+      >
         welcome to the blogs page
       </h1>
-      <div class="Blogs flex-row  ">
+      <div class="Blogs flex-row">
         <BlogPost
           class="mb-12"
           v-for="post in posts"
@@ -33,12 +37,20 @@ export default {
   name: "Blogs",
   data() {
     return {
-      posts: jsonPosts,
+      posts: jsonPosts
     };
   },
   components: {
     BlogPost,
-    SideBar,
+    SideBar
   },
+  // creating custom directive
+  directives: {
+    lineUnder: {
+      bind: function(el) {
+        el.style.textDecoration = "underline";
+      }
+    }
+  }
 };
 </script>

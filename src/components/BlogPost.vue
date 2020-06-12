@@ -1,15 +1,16 @@
 <template>
   <div>
-    <div class=" w-full flex  border-l-4
-        border-r-4 border-t-4 border-b-4 border-teal-600">
+    <div
+      class=" w-full flex 
+    rounded-lg border-l-4 
+        border-r-4 border-t-4 border-b-4 border-teal-600 bg-gray-300 shadow-xl"
+    >
       <div
-        class="h-48 lg:h-auto  lg:w-1/3 flex-none bg-contain rounded-t lg:rounded-t-none  text-center overflow-hidden"
+        class="h-48 lg:h-auto  lg:w-1/3 flex-none bg-contain rounded-md rounded-r-none  text-center overflow-hidden"
         style="background-image: url('https://source.unsplash.com/random')"
         title="Woman holding a mug"
       ></div>
-      <div
-        class=" p-4 flex flex-col  justify-between  rounded-md "
-      >
+      <div class=" p-4 flex flex-col  justify-between  rounded-md ">
         <div class="mb-8">
           <p class="text-sm text-gray-600 flex items-center">
             <svg
@@ -28,7 +29,7 @@
             {{ title }}
           </div>
           <p class="text-gray-700 text-base">
-            {{ content }}
+            {{ content | shorten }}
           </p>
         </div>
         <div class="flex items-center gap-1 ">
@@ -39,12 +40,11 @@
           />
           <div class="text-sm">
             <p class="text-gray-900 leading-none font-semibold text-lg">
-              {{ Author }}
+              {{ Author | uppercase }}
             </p>
             <p class="text-base text-gray-600 ">
               likes : {{ views }}
               <i
-              
                 class="hover  text-red-300 hover:text-red-700 text-xl fas fa-heart "
               ></i>
             </p>
@@ -63,11 +63,14 @@ export default {
   name: "BlogPost",
   data() {
     return {
-      hoy:'hoy'
+      hoy: "hoy"
+    };
+  },
+  filters: {
+    uppercase: function(value) {
+      return value.toUpperCase();
     }
   },
-
-  props: ["title", "date", "content", "Author", "category", "views"],
-  filters: {},
+  props: ["title", "date", "content", "Author", "category", "views"]
 };
 </script>

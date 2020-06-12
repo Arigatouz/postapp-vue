@@ -2,7 +2,7 @@
   <div id="app" class="home  w-screen h-screen">
     <AppHeader />
     <router-view />
-    
+
     <div class="absolute  bottom-0 w-full ">
       <!-- <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -18,8 +18,8 @@
 import AppHeader from "@/components/AppHeader.vue";
 export default {
   components: {
-    AppHeader,
-  },
+    AppHeader
+  }
 };
 </script>
 <style lang="scss"></style>

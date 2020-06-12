@@ -1,0 +1,28 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+.w-500px{
+
+  width:420px;
+}
+
+input{
+  color: blueviolet;
+  transition: all 0.3s ease-in;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  -webkit-box-shadow: 5px 5px 15px -4px #000000; 
+  box-shadow: 5px 5px 15px -4px #000000;
+  
+}
+input:focus{
+  outline: 5px solid rgb(99, 99, 177);
+  outline-offset:-0.2em;
+  
+
+}

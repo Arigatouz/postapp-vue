@@ -1,9 +1,11 @@
 <template>
   <div class="home">
     <div class="hero flex justify-center items-center mt-16 ">
-      <div class="Description lg:w-1/2 max-w-2xl text-justify mr-3 ">
-        <h1 class="description__title text-center text-5xl">welcome to the Game solution</h1>
-        <p class="description__paragraph">
+      <div class="Description w-1/2 text-justify ml-10  ">
+        <h1 v-bold class="description__title text-center text-5xl mb-16 text ">
+          welcome to the Game solution
+        </h1>
+        <p class="description__paragraph text-lg text-justify font-mono">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
           eaque quod nesciunt, adipisci et quidem expedita tempora ipsa
           doloribus perspiciatis porro nostrum voluptatem ea veniam, optio
@@ -11,7 +13,11 @@
         </p>
       </div>
       <div class="hero__image   lg:w-1/2">
-        <img class=" w-4/5 ml-32 " src="../assets/img/gaming-hero.svg" alt="hero_image">
+        <img
+          class=" w-4/5 ml-32 "
+          src="../assets/img/gaming-hero.svg"
+          alt="hero_image"
+        />
       </div>
     </div>
   </div>
@@ -21,6 +27,6 @@
 // @ is an alias to /src
 
 export default {
-  name: "Home",
+  name: "Home"
 };
 </script>
