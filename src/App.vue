@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-white-600 w-screen h-screen">
+  <div id="app" class="home  w-screen h-screen">
     <AppHeader />
     <router-view />
     
